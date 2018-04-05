@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>InternsHub</title>
+    <!-- Bootstrap core CSS-->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template-->
+    <!--<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+
+    <!-- Page level plugin CSS-->
+    <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin.css" rel="stylesheet">
+
+    <!-- Custom styles by Aditya Tyagi for Students Panel of InternsHub-->
+    <link href="css/student.css" rel="stylesheet">
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <a class="navbar-brand" href="index.html">InternsHub</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Profile">
+                    <a class="nav-link" href="myProfile.html">
+                        <i class="fa fa-fw fa-user"></i>
+                        <span class="nav-link-text">My Profile</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Search">
+                    <a class="nav-link" href="searchInternship.html">
+                        <i class="fa fa-fw fa-search"></i>
+                        <span class="nav-link-text">Search</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Applications">
+                    <a class="nav-link" href="myApplications.html">
+                        <i class="fa fa-fw fa-file"></i>
+                        <span class="nav-link-text">My Applications</span>
+                    </a>
+                </li>
+
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Favourites">
+                    <a class="nav-link" href="myFavourites.html">
+                        <i class="fa fa-fw fa-heart"></i>
+                        <span class="nav-link-text">My Favourites</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav sidenav-toggler">
+                <li class="nav-item">
+                    <a class="nav-link text-center" id="sidenavToggler">
+                        <i class="fa fa-fw fa-angle-left"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+                        <i class="fas fa-sign-out-alt"></i>Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Navigation Ends -->
+
+    <div class="content-wrapper">
+
+        <!-- THIS IS THE START OF THE MY PROFILE PAGE -->
+        <div class="container-fluid">
+
+            <!-- CONTENT:START -->
+            <div class="content">
+
+                <!-- Container for the posts:START-->
+                <div class="internship-post border border-secondary rounded-right">
+                    <div class="post-header d-flex">
+                        <div class="company-name mr-auto p-2">
+                            <h4>Sample Company Name</h4>
+                        </div>
+
+                        <div class="apply-by p-2">
+                            <p><strong>Apply By:</strong> 20 March, 2018</p>
+                        </div>
+
+                        <div class="favourites p-2">
+                            <i class="fa far fa-heart fa-2x"></i>
+                        </div>
+
+                    </div>
+
+                    <hr style="margin-top:  -5px;">
+
+                    <div class="post-info">
+                        <ul>
+                            <li><strong>Title: </strong>Web Development Internship (MEAN)</li>
+                            <li><strong>Posted On: </strong>5 March,2018</li>
+                            <li><strong>Stipend: </strong>Rs. 5,000</li>
+                            <li><strong>Number of Applications: </strong>15</li>
+                            <li><strong>Type: </strong>In-Office</li>
+                        </ul>
+                    </div>
+
+                    <div class="question mr-auto p-2">
+                        <h4>Question to Solve:</h4>
+                        <p class="question-text">
+                            This is a sample question that the student has to solve in order to apply. This is a sample question that the student has to solve in order to apply.
+                        </p>
+                    </div>
+
+                </div>
+                <!-- Container for the posts:ENDS-->
+
+                <!-- Container for the INFORMATION:START-->
+                <div class="information border border-secondary rounded-right mr-auto p-2">
+                    <div class="info-company">
+                        <h5>About Sample Company Name</h5>
+                        <p class="company-text">
+                            This is a sample question that the student has to solve in order to apply. This is a sample question that the student has to solve in order to apply.
+                        </p>
+                    </div>
+
+                    <br />
+
+                    <div class="about-internship">
+                        <h5>About the Internship</h5>
+                        <p> Selected intern's day-to-day responsibilities include:
+                            <ol>
+                                <li>Develop web applications using HTML, CSS, JavaScript, AJAX, PHP, SQL</li>
+                                <li>Full stack development - Frond end (UI, UX), Middle tier (PHP, Perl) and Backend(PHP, Perl, SQL, Server-side scripting)</li>
+                                <li>Work as a part of a core product development team to build online applications</li>
+                                <li>Make sure the product being developed is tested and serves business requirements</li>
+                                <li>Present ideas for system improvement</li>
+                                <li>Work closely with business analysts</li>
+                            </ol>
+                        </p>
+                    </div>
+
+                    <br />
+
+                    <div class="skills-required">
+                        <h5>Skills Required</h5>
+                        <ol>
+                            <li>PHP</li>
+                            <li>NodeJS</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ol>
+                    </div>
+
+                    <br />
+
+                    <div class="number-required">
+                        <h5>Interns Required</h5>
+                        <p>Number of Interns Required: 15</p>
+                    </div>
+
+                    <br />
+
+                    <div class="guidelines">
+                        <h5>Guidelines To Apply</h5>
+                        <p>
+                            <ol>
+                                <li>In order to apply, you have to solve/complete the question/task given by the company.</li>
+                                <li>Once done, you have to UPLOAD IT ON YOUR GOOGLE DRIVE and share the link of that folder here, while applying.</li>
+                                <li>The companies will go through your solution/submitted work and will rank you accordingly.</li>
+                                <li>You can see the status of your application and your ranking on the LEADERBOARD.</li>
+                                <li>Top performers will be selected as interns by the company.</li>
+                            </ol>
+                        </p>
+                    </div>
+
+                    <hr>
+                    <div class="apply">
+                        <button class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#applyConfirmation">Apply</button>
+                    </div>
+
+                    <!--Modal for applying internship: STARTS-->
+                    <div class="modal fade" id="applyConfirmation" tabindex="-1" role="dialog" aria-labelledby="applyConfirmationTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Go for it!</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="solutionLink">Link for your solution</label>
+                                            <input type="text" class="form-control" id="solutionLink" placeholder="Paste Google Drive/DropBox link of your solution">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">Upload Resume</span>
+                                                </div>
+                                                <div class="custom-file">
+                                                    <input type="file" class="custom-file-input" id="inputGroupFile01">
+                                                    <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <a href="myApplications.html"><button type="button" class="btn btn-success">Apply</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Modal for applying internship: -->
+
+                </div>
+                <!-- Container for the INFORMATION:ENDS-->
+
+                <div class="leaderboard border border-secondary rounded-right mr-auto p-2">
+                    <h5>Leaderboard</h5>
+
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Rank</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Mail</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Applied On</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-success">
+                                <th scope="row">1</th>
+                                <td>Aditya Tyagi</td>
+                                <td>tyagi@gmail.com</td>
+                                <td>Accepted</td>
+                                <td>12 March, 2018</td>
+                            </tr>
+                            <tr class="table-success">
+                                <th scope="row">2</th>
+                                <td>Aditya Tyagi</td>
+                                <td>tyagi@gmail.com</td>
+                                <td>Accepted</td>
+                                <td>12 March, 2018</td>
+                            </tr>
+                            <tr class="table-success">
+                                <th scope="row">3</th>
+                                <td>Aditya Tyagi</td>
+                                <td>tyagi@gmail.com</td>
+                                <td>Accepted</td>
+                                <td>12 March, 2018</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Pranav Tyagi</td>
+                                <td>tyagi@gmail.com</td>
+                                <td>Decision Pending</td>
+                                <td>12 March, 2018</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>Saksham Tyagi</td>
+                                <td>tyagi@gmail.com</td>
+                                <td>Decision Pending</td>
+                                <td>12 March, 2018</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">6</th>
+                                <td>Anant Tyagi</td>
+                                <td>tyagi@gmail.com</td>
+                                <td>Decision Pending</td>
+                                <td>12 March, 2018</td>
+                            </tr>
+                            <tr class="table-danger">
+                                <th scope="row">7</th>
+                                <td>Ayush Tyagi</td>
+                                <td>tyagi@gmail.com</td>
+                                <td>Rejected</td>
+                                <td>12 March, 2018</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+
+            </div>
+            <!-- CONTENT:ENDS -->
+
+        </div>
+        <!-- /.container-fluid-->
+        <!-- /.content-wrapper-->
+        <footer class="sticky-footer">
+            <div class="container">
+                <div class="text-center">
+                    <small>Copyright © Sivana Inc. 2018</small>
+                </div>
+            </div>
+        </footer>
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fa fa-angle-up"></i>
+        </a>
+        <!-- Logout Modal-->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+                    </div>
+                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                        <a class="btn btn-primary" href="login.html">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JavaScript-->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- Core plugin JavaScript-->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+        <!-- Page level plugin JavaScript-->
+        <script src="vendor/chart.js/Chart.min.js"></script>
+        <script src="vendor/datatables/jquery.dataTables.js"></script>
+        <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+        <!-- Custom scripts for all pages-->
+        <script src="js/sb-admin.min.js"></script>
+        <!-- Custom scripts for this page-->
+        <script src="js/sb-admin-datatables.min.js"></script>
+
+    </div>
+</body>
+
+</html>
