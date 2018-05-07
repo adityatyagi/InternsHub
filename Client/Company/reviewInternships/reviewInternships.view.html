@@ -1,0 +1,42 @@
+<page-header content=reviewVm.pageHeader></page-header>
+
+<!-- Filter -->
+
+<div class="col-xs-12" style="text-align: center; margin: 10px">
+	<label for="filter">Filter Results</label>&nbsp;
+	<input type="text" id="filter" name="filter" ng-model="textFilter" />
+</div>
+
+
+	<div class=" list-group">
+		<div class="col-xs-12 list-group-item" ng-repeat="internship in reviewVm.internshipsByCompany.internships | filter : textFilter">
+			
+			<div class="internship-post" style="background-color: white; margin-bottom: 15px;">
+				<!-- Internship post-->
+				<div class="post-header d-flex">
+					<div class="mr-auto p-2">
+						<h5 class="internship-title">{{internship.internship_title}}</h5>
+					</div>
+
+					<div class="apply-by p-2">
+						<p><strong>Posted on: </strong><span class="i-postDate">{{internship.posted_on}}</span></p>
+					</div>
+                    
+                    <div class="view-details p-2">
+                            <a href="#!/reviewInternships/{{ internship._id }}"><button class="btn btn-primary btn-sm">View Details</button></a>
+                    </div>
+
+				</div>
+
+				<div class="internship-info">
+					<ul>
+						<li><strong>Stipend: </strong>{{internship.stipend}}</li>
+						<li><strong>Number of Applications: </strong>{{internship.no_of_applications}}</li>
+						<li><strong>Type: </strong>{{internship.type}}</li>
+						<li><strong>Location: </strong>{{internship.location}}</li>
+						<li><strong>Duration: </strong>{{internship.duration}}</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
