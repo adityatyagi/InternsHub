@@ -24,6 +24,8 @@
             data: internshipPosts.internship
         };
 
+        //console.log(detailsVm.details.data.internship_title);
+
         detailsVm.popUpdateForm = function() {
             var modalInstance = $uibModal.open({
                 animation: false,

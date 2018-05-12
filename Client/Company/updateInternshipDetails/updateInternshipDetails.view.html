@@ -3,9 +3,9 @@
 
         <div class="modal-header">
             <h4 id="myModalLabel" class="modal-title pull-left">Update details for <span style="color: #a91133;">{{ updateVm.internshipData.data.internship_title }}</span></h4>
-            
+
             <button type="button" ng-click="updateVm.modal.cancel()" class="close pull-right"><span aria-hidden="true">×</span><span class="sr-only" >Close</span></button>
-            
+
         </div>
 
         <div class="modal-body">
@@ -16,52 +16,39 @@
 
                 <div class="form-group col-md-6">
                     <label for="title">Title of Internship</label>
-                    <input type="text" name="title" class="form-control" id="title" ng-model="updateVm.formData.internship_title">
+                    <input type="text" name="title" class="form-control" id="title" ng-model="updateVm.internshipData.data.internship_title">
                 </div>
 
                 <div class="form-group col-md-6">
                     <label for="location">Location</label>
-                    <select class="custom-select" id="location" ng-model="updateVm.formData.location">
-                        <option selected>Choose...</option>
-                        <option value="1">New Delhi</option>
-                        <option value="2">Banglore</option>
-                        <option value="3">Mumbai</option>
+                    <select ng-model="updateVm.internshipData.data.location" class="custom-select" ng-options="x for x in updateVm.locations.data">
                     </select>
                 </div>
 
                 <div class="form-group col-md-6">
                     <label for="category">Category</label>
-                    <select class="custom-select" id="category" ng-model="updateVm.formData.category">
-                        <option selected>Choose...</option>
-                        <option value="1">Web development</option>
-                        <option value="2">Graphic design</option>
-                        <option value="3">UX Design</option>
+                    <select ng-model="updateVm.internshipData.data.category" class="custom-select" ng-options="y for y in updateVm.categories.data">
                     </select>
                 </div>
 
                 <div class="form-group col-md-6">
-                    <label class="" for="type">Type</label>
-                    <select class="custom-select" id="Type" ng-model="updateVm.formData.type">
-                        <option selected>Choose...</option>
-                        <option value="1">In-office</option>
-                        <option value="2">Work from Home</option>
-                        <option value="3">Part-time</option>
-                    </select>
+                    <label class="type" for="type">Type</label>
+                    <select ng-model="updateVm.internshipData.data.type" class="custom-select" ng-options="z for z in updateVm.types.data"></select>
                 </div>
 
                 <div class="form-group col-md-6">
                     <label for="stipend">Stipend</label>
-                    <input type="text" class="form-control" id="stipend" placeholder="in Rs." ng-model="updateVm.formData.stipend">
+                    <input type="text" class="form-control" id="stipend" placeholder="in Rs." ng-model="updateVm.internshipData.data.stipend">
                 </div>
 
                 <div class="form-group col-md-6">
-                    <label class="" for="duration">Duration</label>
-                    <input type="number" class="form-control" id="duration" placeholder="duration in months" max="12" ng-model="updateVm.formData.duration">
+                    <label class="" for="duration">Duration (in months)</label>
+                    <input type="text" class="form-control" id="duration" ng-model="updateVm.internshipData.data.duration">
                 </div>
 
                 <div class="form-group col-md-6">
                     <label for="website">Company website</label>
-                    <input type="text" class="form-control" id="website" placeholder="Company Webiste (if available)" ng-model="updateVm.formData.companyWebsite">
+                    <input type="text" class="form-control" id="website" placeholder="Company Webiste (if available)" ng-model="updateVm.internshipData.data.companyWebsite">
                 </div>
 
             </div>
@@ -69,17 +56,17 @@
             <div class="form-row">
                 <div class="form-group col-12">
                     <label for="question">Question to Solve</label>
-                    <textarea name="question" class="form-control" id="question" placeholder="Question to solve" ng-model="updateVm.formData.questionToSolve"></textarea>
+                    <textarea name="question" class="form-control" id="question" placeholder="Question to solve" ng-model="updateVm.internshipData.data.questionToSolve"></textarea>
                 </div>
 
                 <div class="form-group col-12">
                     <label for="about">Abbout the Internship</label>
-                    <textarea name="about" class="form-control" id="about" placeholder="About the internship" ng-model="updateVm.formData.aboutInternship"></textarea>
+                    <textarea name="about" class="form-control" id="about" placeholder="About the internship" ng-model="updateVm.internshipData.data.aboutInternship"></textarea>
                 </div>
 
                 <div class="form-group col-12">
                     <label for="skills">Skills required</label>
-                    <textarea name="skills" class="form-control" id="skills" placeholder="Skills required for the internship" ng-model="updateVm.formData.skillsRequired"></textarea>
+                    <textarea name="skills" class="form-control" id="skills" placeholder="Skills required for the internship" ng-model="updateVm.internshipData.data.skillsRequired"></textarea>
                 </div>
             </div>
             <!--Form for updating: Ends-->

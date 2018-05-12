@@ -29,6 +29,10 @@
             <li><strong>Type: </strong>{{detailsVm.details.data.type}}</li>
             <li><strong>Location: </strong>{{detailsVm.details.data.location}}</li>
             <li><strong>Duration: </strong>{{detailsVm.details.data.duration}}</li>
+            <li><strong>Company Website: </strong>{{detailsVm.details.data.companyWebsite }}</li>
+            <li><strong>Question to solve: </strong>{{detailsVm.details.data.questionToSolve}}</li>
+            <li><strong>About Internship: </strong>{{detailsVm.details.data.aboutInternship }}</li>
+            <li><strong>Skills Required: </strong>{{detailsVm.details.data.skillsRequired}}</li>
         </ul>
     </div>
 </div>
@@ -101,7 +105,7 @@
                 </div>
             </div>
             <div class="card-footer text-muted">
-                Applied on 
+                Applied on
                 <span class="submission-date">
                     {{ info.applicant_dateOfApplying }}
                 </span>
@@ -132,16 +136,15 @@
 </div>
 
 <script>
-    $(document).ready(function(){
-        $(document).on('click','.submission-accept',function() {
+    $(document).ready(function() {
+        $(document).on('click', '.submission-accept', function() {
 
             $(this).parents('.submission-tile').addClass('alert-success');
             $(this).parents('.submission-tile').removeClass('alert-danger');
         });
-        $(document).on('click','.submission-reject',function() {
+        $(document).on('click', '.submission-reject', function() {
             $(this).parents('.submission-tile').addClass('alert-danger');
             $(this).parents('.submission-tile').removeClass('alert-success');
         });
     });
-
 </script>
