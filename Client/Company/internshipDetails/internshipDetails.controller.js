@@ -35,32 +35,25 @@
                 resolve: {
                     internshipData: function() {
                         return {
-                            internshipId: detailsVm.internship_id,
+                            //internshipId: detailsVm.internship_id,
                             internshipInfo: detailsVm.details.data
                         };
                     }
                 }
             });
 
-            modalInstance.result.then(function(selectedItem) {
-                detailsVm.popUpdateForm.selected = selectedItem;
-            }, function() {
-                $log.info('modal-component dismissed at: ' + new Date());
-            });
+
+            // promise is coming as expected, but we dont need to work with the data for now.
+            modalInstance.result
+                .then(function(response) {
+                    console.log('this is the response just before getting added: ' + JSON.stringify(response));
+                    // update the data of the internship
+                    //vm.data.location.reviews.push(response.data);
+                }, function(e) {
+                    console.log(e);
+                });
+
         };
-
-
-        // modalInstance.result.then(function(response) {
-        //     console.log('this is the response just before getting added: ' + response.data);
-        //     // update the data of the internship
-        //     //vm.data.location.reviews.push(response.data);
-        // }, function(e) {
-        //     console.log(e);
-        // });
-
-
-
-
 
     }; // controller function: ENDS
 

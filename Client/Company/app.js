@@ -1,7 +1,7 @@
 (function() {
 
 
-    angular.module('ih-app', ['ngRoute', 'ngSanitize', 'ui.bootstrap']);
+    angular.module('ih-app', ['ngRoute', 'ngSanitize', 'ui.bootstrap', 'cp.ngConfirm']);
 
     // configuring the routing
     function config($routeProvider, $locationProvider) {

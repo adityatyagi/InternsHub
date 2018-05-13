@@ -245,6 +245,13 @@
             ]
         }
 
+
+
+        // POST: add new internship using a company id.
+        var addNewInternship = function(companyId, internshipData) {
+            //call to api for adding new internship with the companyid and internship data
+        }
+
         return {
             internships: internshipsByCompany.internships,
             internship: internshipById

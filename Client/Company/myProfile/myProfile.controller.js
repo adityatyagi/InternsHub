@@ -8,9 +8,31 @@
         1. companyData: CRUD details of company
         2. masterData: to get the data for all the dropdown menus
     */
-    function myProfileCtrl(companyData, masterData) {
+    function myProfileCtrl(companyData, masterData, $ngConfirm) {
         // for holding the view-modal data
         var myProfileVm = this;
+
+        myProfileVm.onUpdate = function() {
+            $ngConfirm({
+                title: 'Confirm Update?',
+                content: 'Are you sure you want to update?',
+                buttons: {
+                    Yes: {
+                        text: 'Yes',
+                        btnClass: 'btn-blue',
+                        action: function(button) {
+                            myProfileVm.onSubmit();
+                            $ngConfirm('Information Updated.');
+                            //return false; // prevent close;
+                        }
+                    },
+                    close: function(button) {
+                        // closes the modal
+                    },
+                }
+            });
+        }
+
 
         myProfileVm.pageHeader = {
             title: 'My Profile'
@@ -38,28 +60,12 @@
 
         };
 
-        myProfileVm.update = function() {
-            // $confirm({ text: 'Are you sure you want to update?' })
-            //     .then(function() {
-            //         myProfileVm.updateCompanyDetails(myProfileVm.companyData.data.c_id, myProfileVm.companyData.data);
-            //     });
-        };
-
-
         myProfileVm.updateCompanyDetails = function(id, data) {
             // calling the companyData service to update the info
             console.log(id);
             console.log(data);
-            alert('Information Updated.')
+            console.log('Information Updated.')
         }
-
-
-
-
-        // myProfileVm.update = function() {
-
-        // }
-
 
     }
 })();

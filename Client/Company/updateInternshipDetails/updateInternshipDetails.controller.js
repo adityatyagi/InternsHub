@@ -45,15 +45,19 @@
                 updateVm.formError = "All fields required, please try again!";
                 return false; // this will prevent the form from being submitted
             } else {
-                updateVm.updateInternshipDetails(updateVm.internshipData.internshipId, updateVm.internshipData.data);
+                updateVm.updateInternshipDetails(updateVm.internshipData.data._id, updateVm.internshipData.data);
                 // bringing the data in the formData from ng-model in the form which is built in the view
-                console.log(updateVm.internshipData.data);
+                console.log('In onSubmit function');
                 //return false;
             }
 
         };
 
         updateVm.updateInternshipDetails = function(internshipId, updatedInternshipInfo) {
+            console.log(internshipId);
+            console.log(updatedInternshipInfo);
+            alert('Internship information updated');
+            updateVm.modal.close(updatedInternshipInfo);
 
             // using the internshipPosts service to call the method that calls the API to update info of internship - can also be the addInternship
 
@@ -71,14 +75,15 @@
 
 
 
-        /*updateVm.modal = {
+        updateVm.modal = {
             close: function(result) {
+                console.log('this is the result: ' + result);
                 $uibModalInstance.close(result); //this will send a promise to the parent controller which is internshipDetails.controller.js
             },
             cancel: function() {
                 $uibModalInstance.dismiss('cancel');
             }
-        }*/
+        }
 
     } // Controller Function: ENDS
 

@@ -14,7 +14,8 @@
             c_yoe: '2016',
             c_email: 'support@noteshub.co.in',
             c_num_of_employees: '21-50',
-            c_description: 'This is a sample description for of the company'
+            c_description: 'This is a sample description for of the company',
+            c_website: 'noteshub.co.in'
         }
 
         return {
