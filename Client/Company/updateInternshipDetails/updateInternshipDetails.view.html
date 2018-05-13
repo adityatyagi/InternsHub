@@ -21,19 +21,19 @@
 
                 <div class="form-group col-md-6">
                     <label for="location">Location</label>
-                    <select ng-model="updateVm.internshipData.data.location" class="custom-select" ng-options="x for x in updateVm.locations.data">
+                    <select ng-model="updateVm.internshipData.data.location" class="custom-select" ng-options="x for x in updateVm.masterData.locations">
                     </select>
                 </div>
 
                 <div class="form-group col-md-6">
                     <label for="category">Category</label>
-                    <select ng-model="updateVm.internshipData.data.category" class="custom-select" ng-options="y for y in updateVm.categories.data">
+                    <select ng-model="updateVm.internshipData.data.category" class="custom-select" ng-options="y for y in updateVm.masterData.categories">
                     </select>
                 </div>
 
                 <div class="form-group col-md-6">
                     <label class="type" for="type">Type</label>
-                    <select ng-model="updateVm.internshipData.data.type" class="custom-select" ng-options="z for z in updateVm.types.data"></select>
+                    <select ng-model="updateVm.internshipData.data.type" class="custom-select" ng-options="z for z in updateVm.masterData.types"></select>
                 </div>
 
                 <div class="form-group col-md-6">
@@ -74,7 +74,7 @@
 
         <div class="modal-footer">
             <button ng-click="updateVm.modal.cancel()" type="button" class="btn btn-default">Cancel</button>
-            <button type="submit" class="btn btn-primary">Submit review</button>
+            <button type="submit" class="btn btn-primary">Update Information</button>
         </div>
     </form>
 </div>

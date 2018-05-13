@@ -6,10 +6,12 @@
     // internshipData is not a service, but a parameter which came from resolve while defining the modal in the internshipDetals.controller.js
 
     // internshipPosts is the service that is being used to fetch the data form the API.
-    function updateInternshipDetailsCtrl($uibModalInstance, internshipPosts, internshipData) {
+    // masterData is the service to get the data for all the dropdown menus
+    function updateInternshipDetailsCtrl($uibModalInstance, internshipPosts, masterData, internshipData) {
         var updateVm = this;
 
         //console.log(internshipData.internshipInfo.internship_title);
+        //console.log(masterData);
 
         updateVm.modal = {
             cancel: function() {
@@ -20,22 +22,20 @@
 
         //console.log('hi'+internshipData.internshipId);
         //console.log(internshipData);
+
+        //details for ineternships
         updateVm.internshipData = { data: internshipData.internshipInfo };
+
+        // data for the dropdowns
+        updateVm.masterData = {
+            types: masterData.Types.data,
+            locations: masterData.Locations.data,
+            categories: masterData.Categories.data
+        };
+
         //console.log( updateVm.internshipData.data.internship_title);
 
         //console.log(updateVm.internshipData.data.location);
-
-        updateVm.types = {
-            data: ['In-Office', 'Work from Home', 'Part-time']
-        }
-
-        updateVm.locations = {
-            data: ['New Delhi', 'Banglore', 'Mumbai']
-        }
-
-        updateVm.categories = {
-            data: ['Web Development', 'Graphic design', 'UX Design']
-        }
 
         updateVm.onSubmit = function() {
             // validating the form for all the fields have values or not
